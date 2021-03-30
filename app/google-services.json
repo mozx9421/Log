@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "400328280384",
+    "project_id": "logindb-fd62b",
+    "storage_bucket": "logindb-fd62b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:400328280384:android:4e1d8acaf92044b76552a5",
+        "android_client_info": {
+          "package_name": "com.example.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "400328280384-ob8ka9vjuh73md807i8k2gu2e1f0h0vq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCYdQ9hu_23wpJv8Y77OFEvEGa6jm3tdXM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "400328280384-ob8ka9vjuh73md807i8k2gu2e1f0h0vq.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
