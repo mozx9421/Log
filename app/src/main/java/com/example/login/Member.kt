@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
+import kotlinx.android.synthetic.main.activity_login.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_member.*
 
@@ -19,7 +20,7 @@ class Member : AppCompatActivity() {
         auth = FirebaseAuth.getInstance()
 
         val userData = auth!!.currentUser
-        tvOut.text = userData?.uid.toString()+" "+ userData!!.email
+        tvOut.text = "UserID: "+userData?.uid.toString()+"  "+ userData!!.email
 
         logoutbtn.setOnClickListener {
             auth!!.signOut()
@@ -29,7 +30,5 @@ class Member : AppCompatActivity() {
             startActivity(it)
             finish()
         }
-
-
     }
 }

@@ -6,7 +6,10 @@ import android.os.Bundle
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
+import kotlinx.android.synthetic.main.activity_login.EmailText
+import kotlinx.android.synthetic.main.activity_login.PassText
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_register.*
 import java.lang.reflect.Member
 
 class Login : AppCompatActivity() {
@@ -39,17 +42,17 @@ class Login : AppCompatActivity() {
             }
 
             auth!!.signInWithEmailAndPassword(Email,Pass).addOnCompleteListener{task ->
-                if (!task.isSuccessful){
-                    if (Pass.length < 8){
-                        PassText.error = "Password must be 8-16 Character"
+                if(!task.isSuccessful){
+                    if(Pass.length < 8 ){
+                        PassText.error="Password must be 8-16 character."
                     }
                     else{
-                        Toast.makeText(this,"Login failed: "+ task.exception!!.message,Toast.LENGTH_LONG).show()
+                        Toast.makeText(this, "Login failed: "+task.exception!!.message, Toast.LENGTH_SHORT).show()
                     }
                 }
                 else{
                     Toast.makeText(this, "Login Success!", Toast.LENGTH_SHORT).show()
-                    val it = Intent(this,Member::class.java)
+                    val it = Intent(this, com.example.login.Member::class.java)
                     startActivity(it)
                     finish()
                 }
